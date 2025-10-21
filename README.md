@@ -61,12 +61,10 @@ The policy naturally adapts to changes in volatility, directionality, and liquid
 \##  Architecture
 
 ```
-
-\[Market Data] → \[FinRL Env + Features] → SAC ┐ ├──> Fusion (regime-gated) → Δshares → Evaluation \& Plots \[Kalman pairs (β\_t)] ───────┘ (optional) RecurrentPPO-LSTM → Regime score r\_t ∈ \[−1,1]
-
+[Market Data] → [FinRL Env + Features] → SAC ┐ ├──> Fusion (regime-gated) → Δshares → Evaluation & Plots  
+[Kalman pairs (βₜ)] ───────┘ (optional) RecurrentPPO-LSTM → Regime score rₜ ∈ [−1,1]
 ```
-
-## 🚀 Quickstart
+##  Quickstart
 
 ```bash
 # 1) Clone & create env
