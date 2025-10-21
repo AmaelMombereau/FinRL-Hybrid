@@ -14,27 +14,19 @@ Hybrid Deep Reinforcement Learning for Trading:
 
 ## Model Overview — What the Hybrid Approach Brings
 
-This model integrates **three complementary layers** to make trading more **adaptive**, **interpretable**, and **robust** across changing market conditions.
+This model integrates three complementary layers to make trading more adaptive, interpretable, and robust across changing market conditions.
 
 ### 1) Learning + Structure Combined
 
-- **Soft Actor–Critic (SAC)** learns continuous actions directly from market data, capturing nonlinear dynamics and momentum effects.  
-- **Kalman pairs trading** provides a model-based anchor: a dynamic hedge ratio βₜ between correlated assets and mean-reversion signals from the spread’s z-score.  
+- Soft Actor–Critic (SAC) learns continuous actions directly from market data, capturing nonlinear dynamics and momentum effects.  
+- Kalman pairs trading provides a model-based anchor: a dynamic hedge ratio βₜ between correlated assets and mean-reversion signals from the spread’s z-score.  
 
 Together, they blend deep RL flexibility with a more structural market equilibrium logic.
 
 ### 2) Regime Awareness (optional)
 
-A **Recurrent PPO–LSTM** module can produce a **regime score** \( rₜ ∈ [-1, 1] \) reflecting current market behavior (trend ↔ mean reversion).  
+A Recurrent PPO–LSTM module can produce a regime score \( rₜ ∈ [-1, 1] \) reflecting current market behavior (trend ↔ mean reversion).  
 This score continuously modulates the mix between SAC and Kalman actions:
-
-$$
-a_{\text{final}}
-= w_{\text{SAC}}(r_t)\, a_{\text{SAC}}
-+ w_{\text{Kalman}}(r_t)\, a_{\text{Kalman}},\qquad r_t \in [-1,1]
-$$
-
-
 
 
 ```math
