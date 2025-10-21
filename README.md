@@ -179,6 +179,19 @@ FinRL-Hybrid_SAC_Kalman/
 - Use TensorBoard via SB3 if you add logging (```--tensorboard-log tb\_logs```)
 
 
+## Next step
+
+            ┌───────────────┐
+Market Data →  Feature Engine  →  FinRL Agent (policy)
+ News/PDF  →  RAG+LLM Scores ┘         │
+                                        ▼
+                                Proposed Action
+                                        │
+                   ┌────────────────────┴──────────────────┐
+                   │   LLM Risk Manager / Regime Classifier│
+                   └───────────────┬───────────────────────┘
+                                   ▼
+                              Final Action
 
 ## Citations \& Acknowledgements
 
