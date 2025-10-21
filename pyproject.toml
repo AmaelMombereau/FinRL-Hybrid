@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finrl-hybrid"
+version = "0.1.0"
+description = "Hybrid Kalman (multi-pair) + SAC (+ optional RecurrentPPO) pipeline on FinRL"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Your Name" }]
+license = "MIT"  # SPDX string (évite l'avertissement)
+dependencies = [
+  "pandas>=2.0",
+  "numpy>=1.24",
+  "matplotlib>=3.7",
+  "stable-baselines3>=2.3.0",
+  "sb3-contrib>=2.3.0",
+  "finrl>=0.3.6",
+]
+
+[project.scripts]
+finrl-hybrid = "finrl_hybrid.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["finrl_hybrid*"]
+exclude = ["images*", "tests*", "examples*", "scripts*"]
