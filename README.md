@@ -188,7 +188,7 @@ Market Data ---------------> Feature Engine -------------> FinRL Agent (policy)
                                                                    |
                                                                    v
 News / Reports / PDFs ---> RAG + LLM Scores -------------> LLM Risk Manager /
-                                                                Regime Classifier
+                                                           Regime Classifier
                                                                    |
                                                                    v
                                                                Final Action
