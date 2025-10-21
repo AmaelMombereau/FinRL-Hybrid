@@ -180,18 +180,23 @@ FinRL-Hybrid_SAC_Kalman/
 
 
 ## Next step
-
-            ┌───────────────┐
-Market Data →  Feature Engine  →  FinRL Agent (policy)
- News/PDF  →  RAG+LLM Scores ┘         │
-                                        ▼
-                                Proposed Action
-                                        │
-                   ┌────────────────────┴──────────────────┐
-                   │   LLM Risk Manager / Regime Classifier│
-                   └───────────────┬───────────────────────┘
-                                   ▼
-                              Final Action
+```text
+Market Data ──► Feature Engine ──► FinRL Agent (policy)
+                     ▲
+                     │
+News / PDF ──► RAG + LLM Scores
+                     │
+                     ▼
+              Proposed Action
+                     │
+        ┌──────────────────────────────┐
+        │  LLM Risk Manager / Regime   │
+        │         Classifier           │
+        └──────────────────────────────┘
+                     │
+                     ▼
+                Final Action
+```
 
 ## Citations \& Acknowledgements
 
