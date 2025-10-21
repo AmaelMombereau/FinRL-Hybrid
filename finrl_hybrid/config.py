@@ -24,7 +24,7 @@ class Config:
     buy_cost_pct: float = 5e-4
     sell_cost_pct: float = 5e-4
     reward_scaling: float = 1e-4
-    eps_trade: float = 0.1
+    eps_trade: float = 0.01
 
     # Components
     use_kalman: bool = True
