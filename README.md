@@ -78,17 +78,18 @@ Below are some sample results from the hybrid FinRL–Kalman–SAC–LSTM pipeli
 ```
 ##  Quickstart
 
-```bash
+
 # 1) Clone & create env
+```bash
 python -m venv .venv && source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+pip install -e .
 ```
 
 # 2) Run the hybrid script (defaults from the file)
 
 ```bash
 
-python run\_hybrid\_trader.py
+py -m finrl_hybrid.cli
 
 ```
 
@@ -100,25 +101,38 @@ Outputs are saved under fig/ (CSV + PNG).
 
 ```
 
-FinRL\_Kalman\_SAC\_LSTM/
+FinRL-Hybrid_SAC_Kalman/
+│
+├── finrl_hybrid/                # main Python package (modular code)
+│   ├── __init__.py
+│   ├── cli.py                   # main entry point
+│   ├── config.py
+│   ├── data.py
+│   ├── envs.py
+│   ├── kalman.py
+│   ├── sac_trainer.py
+│   ├── regime.py
+│   ├── fusion.py
+│   ├── analysis.py
+│   ├── plotting.py
+│   └── utils.py
+│
+├── scripts/
+│   ├── run.py                   # wrapper → calls finrl_hybrid.cli.main
+│   └── customize.py             # optional config tuning example
+│
+├── fig/                         # auto-generated outputs (ignored by git)
+│   └── .gitkeep
+│
+├── README.md
+├── requirements.txt
+├── LICENSE
+├── .gitignore
+├── pyproject.toml
+└── .github/
+    └── workflows/
+        └── ci.yml
 
-├─ README.md
-
-├─ requirements.txt
-
-├─ LICENSE
-
-├─ .gitignore
-
-├─ run\_hybrid\_trader.py # your main script (see skeleton below)
-
-├─ fig/ # auto-created outputs (ignored by git)
-
-└─ .github/
-
-└─ workflows/
-
-└─ ci.yml # optional CI (lint + import check)
 
 ```
 
