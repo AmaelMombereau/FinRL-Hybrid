@@ -31,9 +31,9 @@ This score continuously modulates the mix between SAC and Kalman actions:
 
 ```math
 
-a\_{\\text{final}}
-= w\_{\\text{SAC}}(r\_t)\\, a\_{\\text{SAC}}
-+ w\_{\\text{Kalman}}(r\_t)\\, a\_{\\text{Kalman}},\\qquad r\_t \\in \[-1,1]
+a_{\text{final}}
+= w_{\text{SAC}}(r_t)\, a_{\text{SAC}}
++ w_{\text{Kalman}}(r_t)\, a_{\text{Kalman}},\qquad r_t \in [-1,1]
 
 ```
 
