@@ -12,7 +12,7 @@ Hybrid Deep Reinforcement Learning for Trading:
 
 ---
 
-## Model Overview — What the Hybrid Approach Brings
+## Model Overview: What the Hybrid Approach Brings
 
 This model integrates three complementary layers to make trading more adaptive, interpretable, and robust across changing market conditions.
 
