@@ -61,11 +61,13 @@ The policy naturally adapts to changes in volatility, directionality, and liquid
 
 Below are some sample results from the hybrid FinRL–Kalman–SAC–LSTM pipeline.
 
-### Aggressive trading
-![Portfolio vs QQQ — rebased 100](images/aggresive.png)
+### Stable Mode
+![Stable strategy](finrl_hybrid/images/Stable.png)
 
-### More stable
-![Portfolio vs QQQ — rebased 100](images/stable.png)
+---
+
+### Aggressive Mode
+![Aggressive strategy](finrl_hybrid/images/aggressive.png)
 
 
 \##  Architecture
